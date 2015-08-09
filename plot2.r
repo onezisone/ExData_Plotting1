@@ -16,7 +16,7 @@ selectedData$Global_active_power<-as.numeric(as.character(selectedData$Global_ac
 datetime <- paste(selectedData$Date, selectedData$Time)
 selectedData$DateTime <- as.POSIXct(datetime)
 
-#Creating histogram
+#Creating plot
 png("plot2.png",480,480)
 plot(selectedData$DateTime, selectedData$Global_active_power, type="l",  lwd=1, xlab="", ylab="Global Active Power (kilowatts)")
 dev.off()
